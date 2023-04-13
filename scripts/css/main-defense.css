@@ -3,12 +3,14 @@ a {
     color: inherit;
     text-decoration: none;
 }
-button{
+
+button {
     width: 5%;
     height: 5%;
-    
+
 }
-@font-face{
+
+@font-face {
     font-family: 'Maplestory';
     src: url(../../source/Fonts/MaplestoryLight.ttf);
 }
@@ -16,34 +18,54 @@ button{
 /* layout */
 .wrapper {
     font-size: 18px;
-    font-family: 'Maplestory',sans-serif;
-    background: url('../../img/bg/maplestoryBG.jpg') no-repeat ;
+    font-family: 'Maplestory', sans-serif;
+    background: url('../../img/bg/maplestoryBG.jpg') no-repeat;
     height: 100vh;
-    position: relative; /* pos 줄 것을 대비해서 */
+    position: relative;
+    color: white;
+    /* pos 줄 것을 대비해서 */
 }
 
-.wrapper button{
+.wrapper button {
     position: absolute;
-    color:  white;
+    color: white;
     left: 2%;
     top: 2%;
+    width: 10%;
+    background: rgba(255, 165, 0, 0.9);
 }
-.wrapper .tutorial-button{
-    background: orange;
+.wrapper button:hover{
+    width: 8%;
+    height: 6%;
 }
 
-.wrapper .start-button{
+.wrapper button:hover{
+    background: rgb(255, 165, 0);
+    width: 15%;
+    font-size: 30px;
+}
+
+.wrapper .start-button {
+    font-size: 20px;
+    border-radius: 10px;
     left: 10%;
+    border: 1px solid white;
 }
 
 
 /* header */
-header{
+header {
     text-align: center;
     padding-top: 20px;
     font-weight: bold;
     color: orange;
     font-size: 45px;
+}
+header img{
+    position: relative;
+    display: inline-block;
+    width: 3%;
+    height: 20%;
 }
 
 /* main */
@@ -69,7 +91,7 @@ section.main {
 }
 
 /* upper-ui(위쪽 메뉴) */
-section.main .upper-ui{
+section.main .upper-ui {
     display: flex;
     width: 100%;
     height: 20%;
@@ -78,131 +100,185 @@ section.main .upper-ui{
 }
 
 /* stage 문구 */
-section.main .upper-ui .stage{
-    position: relative;;
+section.main .upper-ui .stage {
+    position: relative;
+    ;
     height: 50%;
     top: -15%;
     padding-left: 5%;
     margin: 0;
-    font-size: 30px; 
+    font-size: 30px;
     height: 50%;
 }
 
 /* 남은 적 게이지 */
-section.main .upper-ui .enemyGauge{
+section.main .upper-ui .enemyGauge {
     position: absolute;
     top: 10%;
     width: 20%;
     height: 13%;
-    background: rgba(128, 128, 128,0.3);
+    background: rgba(128, 128, 128, 0.3);
 }
 
-section.main .upper-ui .enemyGauge .gauge{ 
+section.main .upper-ui .enemyGauge .gauge {
     /* top: 10%; */
     margin: 0 20px;
     width: 90%;
     height: 50%;
 }
 
-section.main .upper-ui .enemyGauge .togo{ 
+section.main .upper-ui .enemyGauge .togo {
     z-index: 1000;
     width: 100%;
-    
+
     background: rgba(0, 255, 128, 0.8);
     border-radius: 10px;
-    border: 3px solid black;
+    border: 3px solid white;
 }
-section.main .upper-ui .enemyGauge .leftover{
+
+section.main .upper-ui .enemyGauge .leftover {
     position: relative;
     top: -55%;
     width: 80%;
     background: rgba(255, 0, 128, 0.8);
     border-radius: 10px;
-    border: 3px solid black;
+    border: 3px solid white;
 }
+
 /* timer */
-section.main .upper-ui .timer{
+section.main .upper-ui .timer {
     position: absolute;
     left: 25%;
     font-size: 30px;
 }
-section.main .upper-ui .timer h3{
+
+section.main .upper-ui .timer h3 {
     margin: 25% auto;
     text-align: center;
 }
 
 /* money */
-section.main .upper-ui .money{
+section.main .upper-ui .money {
     position: absolute;
     left: 35%;
     font-size: 30px;
 }
-section.main .upper-ui .money h3{
+
+section.main .upper-ui .money h3 {
     margin: 21% auto;
     text-align: center;
 }
 
 /* score */
-section.main .upper-ui .totalScore{
+section.main .upper-ui .totalScore {
     position: absolute;
     left: 45%;
     font-size: 30px;
 }
-section.main .upper-ui .totalScore h3{
+
+section.main .upper-ui .totalScore h3 {
     margin: 19% auto;
     text-align: center;
 }
-section.main .upper-ui .summon{
+
+section.main .upper-ui .summon-list {
+    display: flex;
     position: relative;
-    width: 40%;
+    width: 45%;
     height: 100%;
-    left: 50%;
+    left: 40%;
+    margin: 0 1%;
     overflow: hidden;
-}
-section.main .upper-ui .summon .miner{
-    position: absolute;
-   /*  height: 95%; */
+    box-sizing: border-box;
+  /*   border: 1px solid black; */
 }
 
-section.main .upper-ui .summon .attacker{
+section.main .upper-ui .summon-list .miner {
+    display: flex;
+    width: 45%;
+    height: 100%;
+    transform: translateY(-2.7%);
+    /*  height: 95%; */
+    /* border: 3px solid white;   */
+}
+
+section.main .upper-ui .summon-list .miner .minor-txt{
     position: relative;
-   /*  height: 90%; */
+    top: 10%;
+    border: 1px solid white;  
+}
+
+section.main .upper-ui .summon-list .miner-img{
+   
+    border: 1px solid white;  
+}
+
+section.main .upper-ui .summon-list .attacker {
+    display: flex;
+    width: 45%;
+    height: 100%;
+    /*  height: 90%; */
+    border: 1px solid white;
     left: 40%;
 }
-
-
+section.main .upper-ui .summon-list .attacker .attacker-img{
+transform: scale(0.8) translateY(-13%);
+}
 /* game-zone */
-section.main .game-zone{
+section.main .game-zone {
     position: absolute;
     top: 20%;
 
     width: 100%;
     height: 80%;
-    /* background: rgba(0, 128, 0, 0.3); */
 }
 
 /* lane */
-section.main .game-zone .lane{
+section.main .game-zone .lane {
+    height: 25%;
+}
+section.main .game-zone .lane .pos{
+    display: flex;
+    box-sizing: border-box;   
+    border: 1px solid white;
+}
+
+/* summon pos */
+section.main .game-zone .lane .left{ 
     position: absolute;
+    left: 60%;
+    width: 10%;
+    height: 25%;
+}
+section.main .game-zone .lane .middle{
+    position: absolute;
+    left: 70%;
+    width: 10%;
+    height: 25%;
+}
+section.main .game-zone .lane .right{
+    position: absolute;
+    left: 80%;
+    width: 10%;
     height: 25%;
 }
 
-section.main .game-zone .lane1{
+/* lane Position */
+section.main .game-zone .lane1 {
     width: 100%;
     background: rgba(0, 128, 0, 0.3);
 }
-
-section.main .game-zone .lane2{
+section.main .game-zone .lane2 {
     top: 25%;
     width: 100%;
     background: rgba(0, 64, 128, 0.4);
 }
-section.main .game-zone .lane3{
+section.main .game-zone .lane3 {
     top: 50%;
     width: 100%;
     background: rgba(0, 128, 0, 0.3);
 }
-section.main .game-zone .lane4{
+section.main .game-zone .lane4 {
     top: 75%;
     width: 100%;
     background: rgba(0, 64, 128, 0.4);
