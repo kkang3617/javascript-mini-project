@@ -3,25 +3,26 @@ const $start = document.querySelector('.wrapper .start-button');
 
 $start.addEventListener('click', e => {
     const $main = document.querySelector('.main')
+    
+    /* 첫번째 텍스트박스 */
     const $tutorialBox1 = document.createElement('div');
 
-    /* 첫번째 텍스트박스 */
     $main.appendChild($tutorialBox1);
     $tutorialBox1.className = 'tutorialBox1';
     $tutorialBox1.style.position = 'absolute';
     $tutorialBox1.style.top = '65%';
     $tutorialBox1.style.left = '5%';
-    $tutorialBox1.style.width = '60%';
+    $tutorialBox1.style.width = '50%';
     $tutorialBox1.style.height = '30%';
     $tutorialBox1.style.borderRadius = '20px';
     $tutorialBox1.style.background = 'black';
     $tutorialBox1.style.opacity = '0.7';
     $tutorialBox1.style.color = 'white';
     $tutorialBox1.style.fontSize = '30px';
-    $tutorialBox1.innerHTML = '화살표 위치의 엄마 슬라임 버튼을 <br> 선택하여 주세요.';
+    $tutorialBox1.innerHTML = '박스안의 광부를 눌러주세요.';
     $tutorialBox1.style.textAlign = 'center';
     $tutorialBox1.style.lineHeight = '200%';
-    $tutorialBox1.style.padding = '65px 10%';
+    $tutorialBox1.style.padding = '80px 10%';
     $tutorialBox1.style.boxSizing = 'border-box';
 
     /* 첫번째 노란색박스 */
@@ -31,10 +32,9 @@ $start.addEventListener('click', e => {
     $yellowBox1.className = 'yellowBox1';
     $yellowBox1.style.position = 'absolute';
     $yellowBox1.style.border = '5px solid yellow';
-    $yellowBox1.style.borderRadius = '20px';
     $yellowBox1.style.top = '0%';
-    $yellowBox1.style.left = '85%';
-    $yellowBox1.style.width = '14%';
+    $yellowBox1.style.left = '55%';
+    $yellowBox1.style.width = '20%';
     $yellowBox1.style.height = '19%';
 
     /* 첫번째 위 화살표*/
@@ -46,18 +46,19 @@ $start.addEventListener('click', e => {
     $up.style.color = 'yellow';
     $up.style.fontSize = '60px';
     $up.style.fontWeight = 'bold';
-    $up.style.left = '90.5%';
+    $up.style.left = '63.5%';
     $up.style.bottom = '72%';
 
+    /* 1 -> 2 */
     const block1 = setTimeout(() => {
         $tutorialBox1.style.display = 'none';
         $yellowBox1.style.display = 'none';
         $up.style.display = 'none';
         $tutorialBox2.style.display = 'block';
         $yellowBox2.style.display = 'block';
-        $down.style.display = 'block';
+        $down2.style.display = 'block';
         clearTimeout(block1);
-    }, 7000);
+    }, 2000);
 
     /* 두번째 텍스트박스 */
     const $tutorialBox2 = document.createElement('div');
@@ -68,17 +69,17 @@ $start.addEventListener('click', e => {
     $tutorialBox2.style.position = 'absolute';
     $tutorialBox2.style.top = '65%';
     $tutorialBox2.style.left = '5%';
-    $tutorialBox2.style.width = '60%';
+    $tutorialBox2.style.width = '50%';
     $tutorialBox2.style.height = '30%';
     $tutorialBox2.style.borderRadius = '20px';
     $tutorialBox2.style.background = 'black';
     $tutorialBox2.style.opacity = '0.7';
     $tutorialBox2.style.color = 'white';
     $tutorialBox2.style.fontSize = '30px';
-    $tutorialBox2.innerHTML = '해당 박스를 클릭해 주시면,<br> 엄마 슬라임을 생성하실 수 있습니다.';
+    $tutorialBox2.innerHTML = '화살표 위치의 바닥을 클릭하면,<br> 광부를 생성하실 수 있습니다.';
     $tutorialBox2.style.textAlign = 'center';
     $tutorialBox2.style.lineHeight = '200%';
-    $tutorialBox2.style.padding = '65px 10%';
+    $tutorialBox2.style.padding = '50px 10%';
     $tutorialBox2.style.boxSizing = 'border-box';
 
     /* 두번째 노란색박스 */
@@ -89,33 +90,39 @@ $start.addEventListener('click', e => {
     $yellowBox2.style.display = 'none';
     $yellowBox2.style.position = 'absolute';
     $yellowBox2.style.border = '5px solid yellow';
-    $yellowBox2.style.borderRadius = '20px';
     $yellowBox2.style.top = '40%';
-    $yellowBox2.style.left = '70%';
-    $yellowBox2.style.width = '14%';
+    $yellowBox2.style.left = '80%';
+    $yellowBox2.style.width = '9.5%';
     $yellowBox2.style.height = '19%';
 
     /* 두번째 아래화살표 */
-    const $down = document.createElement('i');
+    const $down2 = document.createElement('i');
 
-    $main.appendChild($down);
-    $down.className = 'lnr lnr-chevron-down';
-    $down.style.position = 'absolute';
-    $down.style.color = 'yellow';
-    $down.style.fontSize = '60px';
-    $down.style.fontWeight = 'bold';
-    $down.style.left = '75.5%';
-    $down.style.bottom = '60%';
-    $down.style.display = 'none';
+    $main.appendChild($down2);
+    $down2.className = 'lnr lnr-chevron-down';
+    $down2.style.position = 'absolute';
+    $down2.style.color = 'yellow';
+    $down2.style.fontSize = '60px';
+    $down2.style.fontWeight = 'bold';
+    $down2.style.left = '83%';
+    $down2.style.bottom = '60%';
+    $down2.style.display = 'none';
 
+    /* 2->3 */
     const block2 = setTimeout(() => {
         $tutorialBox2.style.display = 'none';
-        $yellowBox2.style.display = 'none';
-        $down.style.display = 'none';
         $tutorialBox3.style.display = 'block';
-        clearTimeout(block2);
-    }, 14000);
+        $yellowBox3.style.display = 'block';
+        $up3.style.display = 'block';
 
+        /* 메소 올라가는 텍스트 변경 */
+        const $mesoUp = document.querySelector('.totalMeso');
+        $mesoUp.innerHTML = '500';
+        
+        clearTimeout(block2);
+    }, 4000);
+
+    /* 세번째 텍스트박스 */
     const $tutorialBox3 = document.createElement('div');
 
     $main.appendChild($tutorialBox3);
@@ -124,24 +131,272 @@ $start.addEventListener('click', e => {
     $tutorialBox3.style.position = 'absolute';
     $tutorialBox3.style.top = '65%';
     $tutorialBox3.style.left = '5%';
-    $tutorialBox3.style.width = '60%';
+    $tutorialBox3.style.width = '50%';
     $tutorialBox3.style.height = '30%';
     $tutorialBox3.style.borderRadius = '20px';
     $tutorialBox3.style.background = 'black';
     $tutorialBox3.style.opacity = '0.7';
     $tutorialBox3.style.color = 'white';
     $tutorialBox3.style.fontSize = '30px';
-    $tutorialBox3.innerHTML = ' 내용 <br> 내용';
+    $tutorialBox3.innerHTML = ' 광부는 공격할 수 없지만 <br>일정시간마다 메소를 생성합니다.';
     $tutorialBox3.style.textAlign = 'center';
     $tutorialBox3.style.lineHeight = '200%';
-    $tutorialBox3.style.padding = '65px 10%';
+    $tutorialBox3.style.padding = '50px 10%';
     $tutorialBox3.style.boxSizing = 'border-box';
 
+    /* 세번째 노란색박스(메소) */
+    const $yellowBox3 = document.createElement('div');
+
+    $main.appendChild($yellowBox3);
+    $yellowBox3.className = 'yellowBox3';
+    $yellowBox3.style.display = 'none';
+    $yellowBox3.style.position = 'absolute';
+    $yellowBox3.style.border = '5px solid yellow';
+    $yellowBox3.style.top = '0%';
+    $yellowBox3.style.left = '33%';
+    $yellowBox3.style.width = '9.5%';
+    $yellowBox3.style.height = '19%';
+
+     /* 세번째 위 화살표*/
+     const $up3 = document.createElement('i');
+
+    $main.appendChild($up3);
+    $up3.className = 'lnr lnr-chevron-up';
+    $up3.style.position = 'absolute';
+    $up3.style.color = 'yellow';
+    $up3.style.fontSize = '60px';
+    $up3.style.fontWeight = 'bold';
+    $up3.style.left = '36.25%';
+    $up3.style.bottom = '72%';
+    $up3.style.display = 'none';
+
+ 
+    /* 3->4 */
     const block3 = setTimeout(() => {
+        $up3.style.display = 'none';
+        $yellowBox2.style.display = 'none';
+        $yellowBox3.style.display = 'none';
         $tutorialBox3.style.display = 'none';
+        $down2.style.display = 'none';
+        $tutorialBox4.style.display = 'block';
+        $yellowBox4.style.display = 'block';
+        $up4.style.display = 'block';
+
+        /* 메소 초기화 */
+        const $mesoUp = document.querySelector('.totalMeso');
+        $mesoUp.innerHTML = '000';
+
         clearTimeout(block3);
-    }, 21000);
+    }, 6000);
+
+    /* 네번째 텍스트박스 */
+    const $tutorialBox4 = document.createElement('div');
+
+    $main.appendChild($tutorialBox4);
+    $tutorialBox4.className = 'tutorialBox4';
+    $tutorialBox4.style.display = 'none';
+    $tutorialBox4.style.position = 'absolute';
+    $tutorialBox4.style.top = '65%';
+    $tutorialBox4.style.left = '5%';
+    $tutorialBox4.style.width = '50%';
+    $tutorialBox4.style.height = '30%';
+    $tutorialBox4.style.borderRadius = '20px';
+    $tutorialBox4.style.background = 'black';
+    $tutorialBox4.style.opacity = '0.7';
+    $tutorialBox4.style.color = 'white';
+    $tutorialBox4.style.fontSize = '30px';
+    $tutorialBox4.innerHTML = '박스안의 요원을 눌러주세요.';
+    $tutorialBox4.style.textAlign = 'center';
+    $tutorialBox4.style.lineHeight = '200%';
+    $tutorialBox4.style.padding = '80px 10%';
+    $tutorialBox4.style.boxSizing = 'border-box';
+
+    /* 네번째 노란색박스 */
+    const $yellowBox4 = document.createElement('div');
+
+    $main.appendChild($yellowBox4);
+    $yellowBox4.className = 'yellowBox4';
+    $yellowBox4.style.display = 'none';
+    $yellowBox4.style.position = 'absolute';
+    $yellowBox4.style.border = '5px solid yellow';
+    $yellowBox4.style.top = '0%';
+    $yellowBox4.style.left = '79%';
+    $yellowBox4.style.width = '20%';
+    $yellowBox4.style.height = '19%';
+
+    /* 네번째 위 화살표*/
+    const $up4 = document.createElement('i');
+
+    $main.appendChild($up4);
+    $up4.className = 'lnr lnr-chevron-up';
+    $up4.style.display = 'none';
+    $up4.style.position = 'absolute';
+    $up4.style.color = 'yellow';
+    $up4.style.fontSize = '60px';
+    $up4.style.fontWeight = 'bold';
+    $up4.style.left = '87.5%';
+    $up4.style.bottom = '72%';
+
+    /* 4->5 */
+    const block4 = setTimeout(() => {
+        $tutorialBox4.style.display = 'none';
+        $yellowBox4.style.display = 'none';
+        $up4.style.display = 'none';
+        $tutorialBox5.style.display = 'block';
+        $yellowBox5.style.display = 'block';
+        $down5.style.display = 'block';
+        clearTimeout(block4);
+    }, 8000);
+
+    /* 다섯번째 텍스트박스 */
+    const $tutorialBox5 = document.createElement('div');
+
+    $main.appendChild($tutorialBox5);
+    $tutorialBox5.className = 'tutorialBox5';
+    $tutorialBox5.style.display = 'none';
+    $tutorialBox5.style.position = 'absolute';
+    $tutorialBox5.style.top = '65%';
+    $tutorialBox5.style.left = '5%';
+    $tutorialBox5.style.width = '50%';
+    $tutorialBox5.style.height = '30%';
+    $tutorialBox5.style.borderRadius = '20px';
+    $tutorialBox5.style.background = 'black';
+    $tutorialBox5.style.opacity = '0.7';
+    $tutorialBox5.style.color = 'white';
+    $tutorialBox5.style.fontSize = '30px';
+    $tutorialBox5.innerHTML = '화살표 위치의 바닥을 클릭하면,<br> 요원을 생성하실 수 있습니다.';
+    $tutorialBox5.style.textAlign = 'center';
+    $tutorialBox5.style.lineHeight = '200%';
+    $tutorialBox5.style.padding = '50px 10%';
+    $tutorialBox5.style.boxSizing = 'border-box';
+
+    /* 다섯번째 노란색박스 */
+    const $yellowBox5 = document.createElement('div');
+
+    $main.appendChild($yellowBox5);
+    $yellowBox5.className = 'yellowBox5';
+    $yellowBox5.style.display = 'none';
+    $yellowBox5.style.position = 'absolute';
+    $yellowBox5.style.border = '5px solid yellow';
+    $yellowBox5.style.top = '40%';
+    $yellowBox5.style.left = '70%';
+    $yellowBox5.style.width = '9.5%';
+    $yellowBox5.style.height = '19%';
+
+    /* 다섯번째 아래화살표 */
+    const $down5 = document.createElement('i');
+
+    $main.appendChild($down5);
+    $down5.className = 'lnr lnr-chevron-down';
+    $down5.style.position = 'absolute';
+    $down5.style.color = 'yellow';
+    $down5.style.fontSize = '60px';
+    $down5.style.fontWeight = 'bold';
+    $down5.style.left = '73%';
+    $down5.style.bottom = '60%';
+    $down5.style.display = 'none';
+
+    /* 5->6 */
+    const block5 = setTimeout(() => {
+        $tutorialBox5.style.display = 'none';
+        $tutorialBox6.style.display = 'block';
+        clearTimeout(block5);
+    }, 10000);
+
+     /* 여섯번째 텍스트박스 */
+    const $tutorialBox6 = document.createElement('div');
+
+    $main.appendChild($tutorialBox6);
+    $tutorialBox6.className = 'tutorialBox6';
+    $tutorialBox6.style.display = 'none';
+    $tutorialBox6.style.position = 'absolute';
+    $tutorialBox6.style.top = '65%';
+    $tutorialBox6.style.left = '5%';
+    $tutorialBox6.style.width = '50%';
+    $tutorialBox6.style.height = '30%';
+    $tutorialBox6.style.borderRadius = '20px';
+    $tutorialBox6.style.background = 'black';
+    $tutorialBox6.style.opacity = '0.7';
+    $tutorialBox6.style.color = 'white';
+    $tutorialBox6.style.fontSize = '30px';
+    $tutorialBox6.innerHTML = '요원은 버섯을 공격할 수 있습니다.';
+    $tutorialBox6.style.textAlign = 'center';
+    $tutorialBox6.style.lineHeight = '200%';
+    $tutorialBox6.style.padding = '80px 10%';
+    $tutorialBox6.style.boxSizing = 'border-box';
+
+    /* 6->7 */
+    const block6 = setTimeout(() => {
+        $tutorialBox6.style.display = 'none';
+        $yellowBox5.style.display = 'none';
+        $down5.style.display = 'none';
+        $tutorialBox7.style.display = 'block';
+        $yellowBox7.style.display = 'block';
+        $up7.style.display = 'block';
+        /* 스코어 올라가는 텍스트 변경 */
+        const $scoreUp = document.querySelector('.scores');
+        $scoreUp.innerHTML = '100';
+        clearTimeout(block6);
+    }, 12000);
+    
+    /* 일곱번째 텍스트박스 */
+    const $tutorialBox7 = document.createElement('div');
+
+    $main.appendChild($tutorialBox7);
+    $tutorialBox7.className = 'tutorialBox7';
+    $tutorialBox7.style.display = 'none';
+    $tutorialBox7.style.position = 'absolute';
+    $tutorialBox7.style.top = '65%';
+    $tutorialBox7.style.left = '5%';
+    $tutorialBox7.style.width = '50%';
+    $tutorialBox7.style.height = '30%';
+    $tutorialBox7.style.borderRadius = '20px';
+    $tutorialBox7.style.background = 'black';
+    $tutorialBox7.style.opacity = '0.7';
+    $tutorialBox7.style.color = 'white';
+    $tutorialBox7.style.fontSize = '30px';
+    $tutorialBox7.innerHTML = '버섯을 죽이면 스코어가 올라갑니다.';
+    $tutorialBox7.style.textAlign = 'center';
+    $tutorialBox7.style.lineHeight = '200%';
+    $tutorialBox7.style.padding = '80px 10%';
+    $tutorialBox7.style.boxSizing = 'border-box';
+
+    /* 일곱번째 노란색박스(스코어) */
+    const $yellowBox7 = document.createElement('div');
+
+    $main.appendChild($yellowBox7);
+    $yellowBox7.className = 'yellowBox3';
+    $yellowBox7.style.display = 'none';
+    $yellowBox7.style.position = 'absolute';
+    $yellowBox7.style.border = '5px solid yellow';
+    $yellowBox7.style.top = '0%';
+    $yellowBox7.style.left = '43.3%';
+    $yellowBox7.style.width = '9.5%';
+    $yellowBox7.style.height = '19%';
+
+    /* 일곱번째 위 화살표*/
+    const $up7 = document.createElement('i');
+
+    $main.appendChild($up7);
+    $up7.className = 'lnr lnr-chevron-up';
+    $up7.style.position = 'absolute';
+    $up7.style.color = 'yellow';
+    $up7.style.fontSize = '60px';
+    $up7.style.fontWeight = 'bold';
+    $up7.style.left = '46.5%';
+    $up7.style.bottom = '72%';
+    $up7.style.display = 'none';
 
 
+     const block7 = setTimeout(() => {
+        $tutorialBox7.style.display = 'none';
+        $yellowBox7.style.display = 'none';
+        $up7.style.display = 'none';
+        
+        /* 스코어 초기화 */
+        const $scoreUp = document.querySelector('.scores');
+        $scoreUp.innerHTML = '000';
+
+        clearTimeout(block7);
+    }, 14000);
 });
-

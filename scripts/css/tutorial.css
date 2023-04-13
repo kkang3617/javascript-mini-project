@@ -1,5 +1,9 @@
 .wrapper .main .yellowBox1,
 .wrapper .main .yellowBox2,
+.wrapper .main .yellowBox3,
+.wrapper .main .yellowBox4,
+.wrapper .main .yellowBox5,
+.wrapper .main .yellowBox7,
 .wrapper .main .lnr { 
     animation: flicker 0.3s infinite alternate;
 }
