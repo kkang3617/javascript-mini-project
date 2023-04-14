@@ -3,7 +3,16 @@ const $start = document.querySelector('.wrapper .start-button');
 
 $start.addEventListener('click', e => {
     const $main = document.querySelector('.main')
-    
+    /* 오디오 변경 */
+    const $audioPlayer = document.querySelector('.audioPlayer');
+    $audioPlayer.setAttribute('src', './source/music/Toturial-First_Step_Master.mp3');
+
+    const stopAudio = setTimeout(() => {
+        $audioPlayer.setAttribute('src', './source/music/Title-TitleBG.mp3');
+        clearTimeout(stopAudio);
+    }, 50000);
+
+
     /* 첫번째 텍스트박스 */
     const $tutorialBox1 = document.createElement('div');
 
@@ -58,7 +67,7 @@ $start.addEventListener('click', e => {
         $yellowBox2.style.display = 'block';
         $down2.style.display = 'block';
         clearTimeout(block1);
-    }, 2000);
+    }, 5000);
 
     /* 두번째 텍스트박스 */
     const $tutorialBox2 = document.createElement('div');
@@ -120,7 +129,7 @@ $start.addEventListener('click', e => {
         $mesoUp.innerHTML = '500';
         
         clearTimeout(block2);
-    }, 4000);
+    }, 10000);
 
     /* 세번째 텍스트박스 */
     const $tutorialBox3 = document.createElement('div');
@@ -187,7 +196,7 @@ $start.addEventListener('click', e => {
         $mesoUp.innerHTML = '000';
 
         clearTimeout(block3);
-    }, 6000);
+    }, 15000);
 
     /* 네번째 텍스트박스 */
     const $tutorialBox4 = document.createElement('div');
@@ -220,8 +229,8 @@ $start.addEventListener('click', e => {
     $yellowBox4.style.position = 'absolute';
     $yellowBox4.style.border = '5px solid yellow';
     $yellowBox4.style.top = '0%';
-    $yellowBox4.style.left = '79%';
-    $yellowBox4.style.width = '20%';
+    $yellowBox4.style.left = '78%';
+    $yellowBox4.style.width = '21%';
     $yellowBox4.style.height = '19%';
 
     /* 네번째 위 화살표*/
@@ -246,7 +255,7 @@ $start.addEventListener('click', e => {
         $yellowBox5.style.display = 'block';
         $down5.style.display = 'block';
         clearTimeout(block4);
-    }, 8000);
+    }, 20000);
 
     /* 다섯번째 텍스트박스 */
     const $tutorialBox5 = document.createElement('div');
@@ -301,7 +310,7 @@ $start.addEventListener('click', e => {
         $tutorialBox5.style.display = 'none';
         $tutorialBox6.style.display = 'block';
         clearTimeout(block5);
-    }, 10000);
+    }, 25000);
 
      /* 여섯번째 텍스트박스 */
     const $tutorialBox6 = document.createElement('div');
@@ -335,9 +344,9 @@ $start.addEventListener('click', e => {
         $up7.style.display = 'block';
         /* 스코어 올라가는 텍스트 변경 */
         const $scoreUp = document.querySelector('.scores');
-        $scoreUp.innerHTML = '100';
+        $scoreUp.innerHTML = '010';
         clearTimeout(block6);
-    }, 12000);
+    }, 30000);
     
     /* 일곱번째 텍스트박스 */
     const $tutorialBox7 = document.createElement('div');
@@ -388,15 +397,170 @@ $start.addEventListener('click', e => {
     $up7.style.display = 'none';
 
 
+    /* 7->8 */
      const block7 = setTimeout(() => {
         $tutorialBox7.style.display = 'none';
         $yellowBox7.style.display = 'none';
         $up7.style.display = 'none';
+        $tutorialBox8.style.display = 'block';
+        $yellowBox8.style.display = 'block';
+        $left8.style.display = 'block';
         
         /* 스코어 초기화 */
         const $scoreUp = document.querySelector('.scores');
         $scoreUp.innerHTML = '000';
 
         clearTimeout(block7);
-    }, 14000);
+    }, 35000);
+
+    /* 여덟번째 텍스트박스 */
+    const $tutorialBox8 = document.createElement('div');
+
+    $main.appendChild($tutorialBox8);
+    $tutorialBox8.className = 'tutorialBox8';
+    $tutorialBox8.style.display = 'none';
+    $tutorialBox8.style.position = 'absolute';
+    $tutorialBox8.style.top = '40%';
+    $tutorialBox8.style.left = '20%';
+    $tutorialBox8.style.width = '30%';
+    $tutorialBox8.style.height = '40%';
+    $tutorialBox8.style.borderRadius = '20px';
+    $tutorialBox8.style.background = 'black';
+    $tutorialBox8.style.opacity = '0.7';
+    $tutorialBox8.style.color = 'white';
+    $tutorialBox8.style.fontSize = '30px';
+    $tutorialBox8.innerHTML = '해당위치에서 적이<br>랜덤으로 생성됩니다.';
+    $tutorialBox8.style.textAlign = 'center';
+    $tutorialBox8.style.lineHeight = '200%';
+    $tutorialBox8.style.padding = '90px 0';
+    $tutorialBox8.style.boxSizing = 'border-box';
+
+     /* 여덟번째 노란색박스 */
+     const $yellowBox8 = document.createElement('div');
+
+    $main.appendChild($yellowBox8);
+    $yellowBox8.className = 'yellowBox8';
+    $yellowBox8.style.display = 'none';
+    $yellowBox8.style.position = 'absolute';
+    $yellowBox8.style.border = '5px solid yellow';
+    $yellowBox8.style.top = '20%';
+    $yellowBox8.style.left = '1%';
+    $yellowBox8.style.width = '9.5%';
+    $yellowBox8.style.height = '78.75%';
+
+     /* 여덟번째 왼쪽화살표*/
+     const $left8 = document.createElement('i');
+
+     $main.appendChild($left8);
+     $left8.className = 'lnr lnr-chevron-left';
+     $left8.style.position = 'absolute';
+     $left8.style.color = 'yellow';
+     $left8.style.fontSize = '60px';
+     $left8.style.fontWeight = 'bold';
+     $left8.style.left = '12%';
+     $left8.style.bottom = '36.5%';
+     $left8.style.display = 'none';
+
+
+    /* 8->9 */
+    const block8 = setTimeout(() => {
+        $tutorialBox8.style.display = 'none';
+        $yellowBox8.style.display = 'none';
+        $left8.style.display = 'none';
+        $tutorialBox9.style.display = 'block';
+        $yellowBox9.style.display = 'block';
+        $right9.style.display = 'block';
+
+        clearTimeout(block8);
+    }, 40000);
+
+    /* 아홉번째 텍스트박스 */
+    const $tutorialBox9 = document.createElement('div');
+
+    $main.appendChild($tutorialBox9);
+    $tutorialBox9.className = 'tutorialBox9';
+    $tutorialBox9.style.display = 'none';
+    $tutorialBox9.style.position = 'absolute';
+    $tutorialBox9.style.top = '40%';
+    $tutorialBox9.style.left = '30%';
+    $tutorialBox9.style.width = '30%';
+    $tutorialBox9.style.height = '40%';
+    $tutorialBox9.style.borderRadius = '20px';
+    $tutorialBox9.style.background = 'black';
+    $tutorialBox9.style.opacity = '0.7';
+    $tutorialBox9.style.color = 'white';
+    $tutorialBox9.style.fontSize = '30px';
+    $tutorialBox9.innerHTML = '적이 해당위치를 통과하면<br>패배하게 됩니다.';
+    $tutorialBox9.style.textAlign = 'center';
+    $tutorialBox9.style.lineHeight = '200%';
+    $tutorialBox9.style.padding = '90px 0';
+    $tutorialBox9.style.boxSizing = 'border-box';
+    
+    /* 아홉번째 노란색박스 */
+    const $yellowBox9 = document.createElement('div');
+
+    $main.appendChild($yellowBox9);
+    $yellowBox9.className = 'yellowBox9';
+    $yellowBox9.style.display = 'none';
+    $yellowBox9.style.position = 'absolute';
+    $yellowBox9.style.border = '5px solid yellow';
+    $yellowBox9.style.top = '20%';
+    $yellowBox9.style.left = '89.5%';
+    $yellowBox9.style.width = '9.5%';
+    $yellowBox9.style.height = '78.75%';
+
+    /* 아홉번째 왼쪽화살표*/
+    const $right9 = document.createElement('i');
+
+    $main.appendChild($right9);
+    $right9.className = 'lnr lnr-chevron-right';
+    $right9.style.position = 'absolute';
+    $right9.style.color = 'yellow';
+    $right9.style.fontSize = '60px';
+    $right9.style.fontWeight = 'bold';
+    $right9.style.left = '85.5%';
+    $right9.style.bottom = '36.5%';
+    $right9.style.display = 'none';
+
+
+    /* 9->10 */
+    const block9 = setTimeout(() => {
+        $tutorialBox9.style.display = 'none';
+        $yellowBox9.style.display = 'none';
+        $right9.style.display = 'none';
+        $tutorialBox10.style.display = 'block';
+        clearTimeout(block9);
+    }, 45000);
+
+    /* 아홉번째 텍스트박스 */
+    const $tutorialBox10 = document.createElement('div');
+
+    $main.appendChild($tutorialBox10);
+    $tutorialBox10.className = 'tutorialBox10';
+    $tutorialBox10.style.display = 'none';
+    $tutorialBox10.style.position = 'absolute';
+    $tutorialBox10.style.top = '40%';
+    $tutorialBox10.style.left = '20%';
+    $tutorialBox10.style.width = '60%';
+    $tutorialBox10.style.height = '40%';
+    $tutorialBox10.style.borderRadius = '20px';
+    $tutorialBox10.style.color = '#ac0000';
+    $tutorialBox10.style.fontSize = '50px';
+    $tutorialBox10.style.fontWeight = 'bold';
+    $tutorialBox10.innerHTML = '게임을 시작합니다!';
+    $tutorialBox10.style.textAlign = 'center';
+    $tutorialBox10.style.lineHeight = '200%';
+    $tutorialBox10.style.padding = '70px 0';
+    $tutorialBox10.style.boxSizing = 'border-box';
+
+
+    /* 10 */
+    const block10 = setTimeout(() => {
+        $tutorialBox10.style.display = 'none';
+        
+        clearTimeout(block10);
+    }, 50000);
+
+
+
 });

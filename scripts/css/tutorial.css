@@ -4,6 +4,8 @@
 .wrapper .main .yellowBox4,
 .wrapper .main .yellowBox5,
 .wrapper .main .yellowBox7,
+.wrapper .main .yellowBox8,
+.wrapper .main .yellowBox9,
 .wrapper .main .lnr { 
     animation: flicker 0.3s infinite alternate;
 }
@@ -17,3 +19,30 @@
     }
 }
 
+
+.wrapper .main .tutorialBox10 {
+    animation: show 1s linear forwards;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+        z-index: -10;
+        top: -30%;
+    }
+    30% {
+        opacity: 0.3;
+        top: 0;
+    }
+    50% {
+        top: 50%;
+    }
+    75% {
+        top: 30%;
+    }
+    100% {
+        opacity: 1;
+        z-index: 10;
+        top: 40%;
+    }
+}
