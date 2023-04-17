@@ -15,6 +15,18 @@ button {
     src: url(../../source/Fonts/MaplestoryLight.ttf);
 }
 
+.NEM-textbox{
+    display: flex;
+    position: relative;
+    width: 40%;
+    height: 40%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 50%;
+    background: black;
+    z-index: 10000;
+}
+
 /* layout */
 .wrapper {
     font-size: 18px;
@@ -107,18 +119,28 @@ section.main .upper-ui {
 }
 
 /* stage 문구 */
-section.main .upper-ui .stage {
+/* section.main .upper-ui .stage {
     position: relative;
-    ;
     height: 50%;
     top: -15%;
     padding-left: 5%;
     margin: 0;
     font-size: 30px;
     height: 50%;
+} */
+
+section.main .upper-ui .stage {/* 임시 */
+    position: relative;
+    height: 50%;
+    top: -18%;
+    padding-left: 2%;
+    margin-right:-10%;
+    margin: 0;
+    font-size: 50px;
+    height: 50%;
 }
 
-/* 남은 적 게이지 */
+/* 남은 적 게이지
 section.main .upper-ui .enemyGauge {
     position: absolute;
     top: 10%;
@@ -128,7 +150,6 @@ section.main .upper-ui .enemyGauge {
 }
 
 section.main .upper-ui .enemyGauge .gauge {
-    /* top: 10%; */
     margin: 0 20px;
     width: 90%;
     height: 50%;
@@ -150,7 +171,7 @@ section.main .upper-ui .enemyGauge .leftover {
     background: rgba(255, 0, 128, 0.8);
     border-radius: 10px;
     border: 3px solid white;
-}
+} */
 
 /* timer */
 section.main .upper-ui .timer {
@@ -167,7 +188,8 @@ section.main .upper-ui .timer h3 {
 /* money */
 section.main .upper-ui .money {
     position: absolute;
-    left: 35%;
+    left: 34%;
+    top: -1%;
     font-size: 30px;
 }
 
@@ -193,7 +215,7 @@ section.main .upper-ui .summon-list {
     position: relative;
     width: 45%;
     height: 100%;
-    left: 40%;
+    left: 38%;
     margin: 0 1%;
     overflow: hidden;
     box-sizing: border-box;
@@ -226,16 +248,16 @@ section.main .upper-ui .summon-list .attacker {
     display: flex;
     width: 45%;
     height: 100%;
-    margin-left: 5%;
+    margin-left: 3%;
     left: 50%;
     box-sizing: border-box;
 }
 
 section.main .upper-ui .summon-list .attacker .attacker-txt{
     position: relative;
-    padding-top: 7%;
-    margin-right: 10%;
-    font-size: 23px;
+    padding-top: 8%;
+    
+    font-size: 22px;
 }
 
 section.main .upper-ui .summon-list .attacker .attacker-img{ 
@@ -295,8 +317,9 @@ section.main .game-zone .lane .right:hover{
     border: 3px dashed white;
 }
 
-section.main .game-zone img{
-    display: block;
+section.main .game-zone .hero{
+    position: absolute;
+    display: none;
 }
 
 

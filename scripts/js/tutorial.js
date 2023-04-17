@@ -1,16 +1,17 @@
 
 const $start = document.querySelector('.wrapper .start-button');
+let duration = 8000; /* 한 장면당 할당 시간(ms) */
 
 $start.addEventListener('click', e => {
     const $main = document.querySelector('.main')
     /* 오디오 변경 */
     const $audioPlayer = document.querySelector('.audioPlayer');
-    $audioPlayer.setAttribute('src', './source/music/Toturial-First_Step_Master.mp3');
+    $audioPlayer.setAttribute('src', './source/music/Tutorial-First_Step_Master.mp3');
 
     const stopAudio = setTimeout(() => {
-        $audioPlayer.setAttribute('src', './source/music/Title-TitleBG.mp3');
+        $audioPlayer.setAttribute('src', './source/music/MainGame-Rest_N_Peace.mp3');
         clearTimeout(stopAudio);
-    }, 50000);
+    }, duration*10);
 
 
     /* 첫번째 텍스트박스 */
@@ -42,7 +43,7 @@ $start.addEventListener('click', e => {
     $yellowBox1.style.position = 'absolute';
     $yellowBox1.style.border = '5px solid yellow';
     $yellowBox1.style.top = '0%';
-    $yellowBox1.style.left = '55%';
+    $yellowBox1.style.left = '58%';
     $yellowBox1.style.width = '20%';
     $yellowBox1.style.height = '19%';
 
@@ -67,7 +68,7 @@ $start.addEventListener('click', e => {
         $yellowBox2.style.display = 'block';
         $down2.style.display = 'block';
         clearTimeout(block1);
-    }, 5000);
+    }, duration);
 
     /* 두번째 텍스트박스 */
     const $tutorialBox2 = document.createElement('div');
@@ -126,10 +127,10 @@ $start.addEventListener('click', e => {
 
         /* 메소 올라가는 텍스트 변경 */
         const $mesoUp = document.querySelector('.totalMeso');
-        $mesoUp.innerHTML = '500';
+        $mesoUp.innerHTML = '00500';
         
         clearTimeout(block2);
-    }, 10000);
+    }, duration*2);
 
     /* 세번째 텍스트박스 */
     const $tutorialBox3 = document.createElement('div');
@@ -193,10 +194,10 @@ $start.addEventListener('click', e => {
 
         /* 메소 초기화 */
         const $mesoUp = document.querySelector('.totalMeso');
-        $mesoUp.innerHTML = '000';
+        $mesoUp.innerHTML = '00000';
 
         clearTimeout(block3);
-    }, 15000);
+    }, duration*3);
 
     /* 네번째 텍스트박스 */
     const $tutorialBox4 = document.createElement('div');
@@ -255,7 +256,7 @@ $start.addEventListener('click', e => {
         $yellowBox5.style.display = 'block';
         $down5.style.display = 'block';
         clearTimeout(block4);
-    }, 20000);
+    }, duration*4);
 
     /* 다섯번째 텍스트박스 */
     const $tutorialBox5 = document.createElement('div');
@@ -310,7 +311,7 @@ $start.addEventListener('click', e => {
         $tutorialBox5.style.display = 'none';
         $tutorialBox6.style.display = 'block';
         clearTimeout(block5);
-    }, 25000);
+    }, duration*5);
 
      /* 여섯번째 텍스트박스 */
     const $tutorialBox6 = document.createElement('div');
@@ -346,7 +347,7 @@ $start.addEventListener('click', e => {
         const $scoreUp = document.querySelector('.scores');
         $scoreUp.innerHTML = '010';
         clearTimeout(block6);
-    }, 30000);
+    }, duration*6);
     
     /* 일곱번째 텍스트박스 */
     const $tutorialBox7 = document.createElement('div');
@@ -408,10 +409,10 @@ $start.addEventListener('click', e => {
         
         /* 스코어 초기화 */
         const $scoreUp = document.querySelector('.scores');
-        $scoreUp.innerHTML = '000';
+        $scoreUp.innerHTML = '0000';
 
         clearTimeout(block7);
-    }, 35000);
+    }, duration*7);
 
     /* 여덟번째 텍스트박스 */
     const $tutorialBox8 = document.createElement('div');
@@ -472,7 +473,7 @@ $start.addEventListener('click', e => {
         $right9.style.display = 'block';
 
         clearTimeout(block8);
-    }, 40000);
+    }, duration*8);
 
     /* 아홉번째 텍스트박스 */
     const $tutorialBox9 = document.createElement('div');
@@ -530,7 +531,7 @@ $start.addEventListener('click', e => {
         $right9.style.display = 'none';
         $tutorialBox10.style.display = 'block';
         clearTimeout(block9);
-    }, 45000);
+    }, duration*9);
 
     /* 아홉번째 텍스트박스 */
     const $tutorialBox10 = document.createElement('div');
@@ -547,7 +548,7 @@ $start.addEventListener('click', e => {
     $tutorialBox10.style.color = '#ac0000';
     $tutorialBox10.style.fontSize = '50px';
     $tutorialBox10.style.fontWeight = 'bold';
-    $tutorialBox10.innerHTML = '게임을 시작합니다!';
+    $tutorialBox10.innerHTML = '잠시 후 게임을 시작합니다!';
     $tutorialBox10.style.textAlign = 'center';
     $tutorialBox10.style.lineHeight = '200%';
     $tutorialBox10.style.padding = '70px 0';
@@ -559,7 +560,7 @@ $start.addEventListener('click', e => {
         $tutorialBox10.style.display = 'none';
         
         clearTimeout(block10);
-    }, 50000);
+    }, duration*10);
 
 
 
